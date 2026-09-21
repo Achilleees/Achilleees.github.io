@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- Personal project directory. A compact, script-free introduction to Achille's current work. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#edf0ee">
+  <meta name="referrer" content="no-referrer"><meta name="description" content="{{DESCRIPTION}}"><title>{{TITLE}}</title>
+  <link rel="canonical" href="{{CANONICAL_URL}}"><meta property="og:type" content="website"><meta property="og:title" content="{{TITLE}}"><meta property="og:description" content="{{DESCRIPTION}}"><meta property="og:url" content="{{CANONICAL_URL}}">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="./assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="./assets/fonts/manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css?v={{STYLE_HASH}}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap"><a class="brand" href="{{HOME_URL}}" aria-label="{{NAME}} home">{{MARK}}<span>{{NAME}}</span></a><a class="github" href="{{GITHUB}}" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">ROUBINIOL / INDEPENDENT WORK</p><h1 id="page-title">{{TAGLINE}}</h1><p>Small, deliberate projects with room to change shape.</p></section>
+    <section class="directory" aria-labelledby="projects-title"><div class="directory-heading"><p class="eyebrow">CURRENT WORK</p><h2 id="projects-title">One project, in progress.</h2></div><article class="project"><div class="project-mark" aria-hidden="true">{{SIDEARM_SYMBOL}}</div><div class="project-copy"><p class="project-status">{{PROJECT_STATUS}}</p><h3>{{PROJECT_NAME}}</h3><p>{{PROJECT_DESCRIPTION}}</p></div><a class="project-action" href="{{SIDEARM_URL}}">{{PROJECT_ACTION}} <span aria-hidden="true">↗</span></a></article></section>
+  </main>
+  <footer class="site-footer wrap"><span>Made by Achille</span>{{CONTACT}}<a href="{{GITHUB}}">GitHub</a><a href="./privacy/">Privacy</a></footer>
+</body>
+</html>

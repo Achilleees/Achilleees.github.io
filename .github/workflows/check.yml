@@ -1,0 +1,23 @@
+name: Check personal site
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: node scripts/build.mjs
+      - run: node scripts/check.mjs
+      - run: node scripts/build.mjs --preview
+      - run: node scripts/check.mjs --preview

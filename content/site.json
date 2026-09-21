@@ -1,0 +1,17 @@
+{
+  "name": "Roubiniol",
+  "title": "Roubiniol — Games, software, and experiments.",
+  "description": "Games, software, and experiments by Achille.",
+  "tagline": "Games, software, and experiments.",
+  "github": "https://github.com/Achilleees",
+  "contact": {
+    "email": "achille@roubiniol.eu",
+    "emailVerified": false
+  },
+  "project": {
+    "name": "Sidearm",
+    "description": "A self-hosted home for personal agents and shared project work",
+    "status": "In development",
+    "action": "Explore Sidearm"
+  }
+}
