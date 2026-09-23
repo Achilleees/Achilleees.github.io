@@ -38,6 +38,8 @@ python -m http.server 4192 --bind 127.0.0.1 --directory preview
 
 Activation requires Matomo >= 5.1 and Org-Rename's verified server controls: exact hostname restrictions, separate IDs, no cross-site identification, IP/referrer handling, disabled individual profiles/session recordings, 180-day retention and reviewed CNIL requirements. Cookieless tracking alone does not prove exemption. Tracking cookies, feature/performance data and campaign/query/hash data are disabled or excluded. Opt-out may add a necessary Matomo preference cookie when active. The related Sidearm hostname has an independent preference, linked from this page.
 
+The source validates the activation booleans and positive safe site ID. `serverVerified` records Org-Rename's operational verification; the build does not inspect the Matomo version, retention or server settings. Those controls are release-policy requirements, separate from the local configuration checks.
+
 Privacy source is intentionally maintained in each independent deployment repository. Apply and test protocol changes in both copies; no shared external build dependency is required.
 
 ## Acceptance
