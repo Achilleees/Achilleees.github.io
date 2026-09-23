@@ -14,7 +14,7 @@ This repository independently owns the Roubiniol personal directory for `https:/
 | `src/privacy.html`, `src/privacy.css`, `src/privacy.js` | Local privacy page and origin-scoped preference |
 | `src/analytics.js`, `src/tests/` | Guarded optional tracker and meaningful exclusion/build tests |
 | `public/` | Fonts, font licenses, favicon, site license and `.nojekyll` |
-| `.github/workflows/check.yml` | Independent production/preview checks; no deployment job |
+| `.github/workflows/check.yml` | Independent production/preview checks; uploads only `dist/` and deploys only from `main` outside pull requests |
 
 ## Local work
 
@@ -44,4 +44,6 @@ Privacy source is intentionally maintained in each independent deployment reposi
 
 Build/check both modes, compare two production file manifests, and run the privacy source/build tests. Review 320/360/768/1024/1440px, the corresponding Sidearm 52rem boundary, 200% reflow, keyboard/focus, text contrast, reciprocal links and script-free content. Check privacy persistence and zero remote analytics in previews; production activation also requires real once-per-action/network/opt-out verification.
 
-Human site/mascot review, a second browser, native reduced-motion/zoom coverage and five-viewer comprehension remain publication gates. Keep their receipts on the canonical progress board. The main publication boundary is coordinated with Org-Rename; this workflow currently only checks source and does not deploy.
+Human site/identity review, a second browser, native reduced-motion/zoom coverage and five-viewer comprehension remain publication gates. Keep their receipts on the canonical progress board. Org-Rename configures GitHub Actions as the Pages source, verifies `achille.roubiniol.eu`, restricts the `github-pages` environment to `main`, and coordinates promotion after those gates pass. The workflow checks production and preview output for `dev`, `main` and pull requests; only a non-pull-request run on `main` uploads `dist/` and deploys it. Deployment waits for the checks and receives Pages/OIDC write permissions only in its own job. Local builds and a prepared workflow do not establish a live deployment.
+
+The accepted apex arrangement is an OVH no-store 302 from `roubiniol.eu` and `www` to Sidearm, activated after both destination sites are healthy. Initial site publication can retain disabled measurement and hidden domain email; their separate verification gates control later activation.
