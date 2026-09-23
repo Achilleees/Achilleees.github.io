@@ -28,7 +28,7 @@ node scripts/check.mjs --preview
 python -m http.server 4192 --bind 127.0.0.1 --directory preview
 ```
 
-`dist/` is production output; `preview/` is noindex local output linking to Sidearm on 4191. Both are ignored. No build reads the website sibling. Unknown CLI options and linked output paths are rejected. Each generated output independently stays under 461120 bytes.
+`dist/` is production output; `preview/` is noindex local output linking to Sidearm on 4191. Both are ignored. No build reads the Sidearm website repository. Unknown CLI options and linked output paths are rejected. Each generated output independently stays under 461120 bytes.
 
 `contact.emailVerified` is false until Org-Rename confirms send/receive and authentication. False omits both the mailbox text and mailto link; GitHub remains usable. `content/analytics.json` likewise stays disabled until the server, IDs and privacy policy are verified. Preview builds never emit an analytics script.
 
