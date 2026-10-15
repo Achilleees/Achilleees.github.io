@@ -34,6 +34,7 @@ export async function checkPrivacy({ root, output, preview, site, errors }) {
     const ref = match[1];
     if (ref.startsWith('#')) { if (!ids.includes(ref.slice(1))) errors.push(`Missing privacy anchor: ${ref}`); continue; }
     if (ref.startsWith('https://')) continue;
+    if (/^mailto:[a-z0-9._%+-]+@roubiniol\.eu$/i.test(ref)) continue;
     if (preview && /^http:\/\/127\.0\.0\.1:419[12]\/(?:privacy\/)?$/.test(ref)) continue;
     const file = resolve(privacyRoot, ref.split(/[?#]/)[0]);
     const path = relative(output, file);
